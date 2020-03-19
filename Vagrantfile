@@ -30,7 +30,7 @@ Vagrant.configure("2") do |config|
   config.vbguest.auto_update = true
 
   # Install build tools
-  config.vm.provision "shell", privileged: false, inline: <<-SHELL 
+  config.vm.provision "shell", privileged: false, inline: <<-SHELL
     sudo apt-get update
     sudo apt-get install -y python3-pip avrdude
     /qmk_firmware/util/qmk_install.sh
